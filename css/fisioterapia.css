@@ -1,0 +1,532 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+/* General container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute; /* Superpuesto al hero */
+    top: 0;
+    left: 0;
+    width: 100%; /* Abarca todo el ancho */
+    z-index: 10; /* Por encima del contenido */
+    color: white;
+    transition: background-color 0.3s ease, position 0.3s ease;
+}
+
+.navbar.scrolled {
+    position: fixed;
+    background-color: rgba(128, 128, 128, 0.8); /* Gris transparente */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo img {
+    width: 150px;
+}
+
+/* Enlaces de la barra de navegación - para escritorio */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Cambiado de fixed a relative */
+    z-index: 15;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white; /* Color blanco */
+    font-size: 16px; /* Tamaño de fuente normal */
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Añadimos una transición suave */
+    padding: 10px 10px; /* Espaciado alrededor del texto */
+}
+
+.nav-links li a:hover {
+    transform: translateY(-5px); /* Animación al hover */
+}
+
+.nav-links li a::after {
+    content: ''; /* Línea decorativa */
+    position: absolute;
+    bottom: -5px; /* Separación de la línea respecto al texto */
+    left: 0;
+    width: 0;
+    height: 2px; /* Grosor de la línea */
+    background-color: #000; /* Azul claro */
+    transition: width 0.3s ease; /* Animación de la línea */
+}
+
+.nav-links li a:hover::after {
+    width: 100%; /* Línea abarca todo el ancho del enlace */
+}
+
+.btn-blue {
+    background-color: #0800ff;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+
+.btn-blue:hover {
+    background-color: #018be8;
+}
+
+/* Estilo para el botón de la versión móvil (menú hamburguesa) */
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.menu-bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), 
+                url('../img/fisioterapia.jpg') no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero .container {
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-hero {
+    padding: 10px 20px;
+    background-color: #00c6ff; /* Azul claro */
+    color: #004d7a; /* Azul oscuro */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: white;
+    color: #004d7a;
+}
+
+/* Therapy Section */
+.therapy-section {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.therapy-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #0066cc;
+    text-align: center;
+}
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+.benefits {
+    margin-top: 2rem;
+    background-color: #f3f3f3;
+    padding: 3rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 670px;
+}
+
+.benefits h2 {
+    font-size: 2rem;
+    color: #004aad;
+    margin-bottom: 2rem;
+}
+
+.benefit-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.benefit-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item h3 {
+    font-size: 1.5rem;
+    color: #0066cc;
+    margin-bottom: 1rem;
+}
+
+.benefit-item p {
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden; /* Evita el desbordamiento */
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal video {
+    width: 100%;
+    height: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+
+/* footer */
+.footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .sociworal-icon,
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .social-icon__item,
+ 
+  
+  .social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  .social-icon__link:hover {
+    transform: translateY(-10px);
+  }
+  
+ 
+  
+  .footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+  }
+  
+  .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+  }
+  
+  .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+  }
+  
+  .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+  }
+  
+  @keyframes animateWaves {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+
+/* Responsive Design */
+
+/* Para pantallas menores a 1200px (Tabletas grandes y laptops pequeñas) */
+@media (max-width: 1200px) {
+    .therapy-section {
+        padding: 1.5rem;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0.8rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+/* Para pantallas menores a 768px (Tabletas y móviles grandes) */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .therapy-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .benefits .benefit-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .benefit-item {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        list-style: none;
+        margin: 0;
+        padding-top: 150px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 15px 15px;
+    }
+}
+
+/* Para pantallas menores a 480px (Móviles pequeños) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    .therapy-section {
+        padding: 1rem;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .benefits .benefit-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .appointment .btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}

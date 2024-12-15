@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.scrollY > 0) {
             navbar.classList.add('scrolled'); // Fija el nav y agrega fondo
         } else {
-            navbar.classList.remove('scrolled'); // Restaura el estado original
+            navbar.classList.remove('scrolled'); //} Restaura el estado original
         }
     });
 });

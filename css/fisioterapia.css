@@ -1,4 +1,9 @@
 /* General Styles */
+.espacio {
+    height: 100px;
+    /* Altura del espacio en blanco */
+}
+
 body {
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
@@ -18,19 +23,24 @@ body {
 
 /* Navbar */
 .navbar {
-    position: absolute; /* Superpuesto al hero */
+    position: absolute;
+    /* Superpuesto al hero */
     top: 0;
     left: 0;
-    width: 100%; /* Abarca todo el ancho */
-    z-index: 10; /* Por encima del contenido */
+    width: 100%;
+    /* Abarca todo el ancho */
+    z-index: 10;
+    /* Por encima del contenido */
     color: white;
     transition: background-color 0.3s ease, position 0.3s ease;
 }
 
 .navbar.scrolled {
     position: fixed;
-    background-color: rgba(128, 128, 128, 0.8); /* Gris transparente */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    background-color: rgba(128, 128, 128, 0.8);
+    /* Gris transparente */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra opcional */
 }
 
 .navbar .container {
@@ -52,36 +62,48 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    position: relative; /* Cambiado de fixed a relative */
+    position: relative;
+    /* Cambiado de fixed a relative */
     z-index: 15;
 }
 
 .nav-links li a {
     text-decoration: none;
-    color: white; /* Color blanco */
-    font-size: 16px; /* Tamaño de fuente normal */
+    color: white;
+    /* Color blanco */
+    font-size: 16px;
+    /* Tamaño de fuente normal */
     position: relative;
-    transition: color 0.3s ease, transform 0.3s ease; /* Añadimos una transición suave */
-    padding: 10px 10px; /* Espaciado alrededor del texto */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Añadimos una transición suave */
+    padding: 10px 10px;
+    /* Espaciado alrededor del texto */
 }
 
 .nav-links li a:hover {
-    transform: translateY(-5px); /* Animación al hover */
+    transform: translateY(-5px);
+    /* Animación al hover */
 }
 
 .nav-links li a::after {
-    content: ''; /* Línea decorativa */
+    content: '';
+    /* Línea decorativa */
     position: absolute;
-    bottom: -5px; /* Separación de la línea respecto al texto */
+    bottom: -5px;
+    /* Separación de la línea respecto al texto */
     left: 0;
     width: 0;
-    height: 2px; /* Grosor de la línea */
-    background-color: #000; /* Azul claro */
-    transition: width 0.3s ease; /* Animación de la línea */
+    height: 2px;
+    /* Grosor de la línea */
+    background-color: #000;
+    /* Azul claro */
+    transition: width 0.3s ease;
+    /* Animación de la línea */
 }
 
 .nav-links li a:hover::after {
-    width: 100%; /* Línea abarca todo el ancho del enlace */
+    width: 100%;
+    /* Línea abarca todo el ancho del enlace */
 }
 
 .btn-blue {
@@ -96,7 +118,8 @@ body {
 
 /* Estilo para el botón de la versión móvil (menú hamburguesa) */
 .menu-toggle {
-    display: none; /* Oculto en escritorio */
+    display: none;
+    /* Oculto en escritorio */
     flex-direction: column;
     gap: 5px;
     background: none;
@@ -115,8 +138,8 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), 
-                url('../img/fisioterapia.jpg') no-repeat center/cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+        url('../img/fisioterapia.jpg') no-repeat center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -141,8 +164,10 @@ body {
 
 .btn-hero {
     padding: 10px 20px;
-    background-color: #00c6ff; /* Azul claro */
-    color: #004d7a; /* Azul oscuro */
+    background-color: #00c6ff;
+    /* Azul claro */
+    color: #004d7a;
+    /* Azul oscuro */
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -209,7 +234,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 670px;
 }
 
 .benefits h2 {
@@ -267,17 +291,20 @@ body {
 
 /* Estilos para el modal */
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro */
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    overflow: hidden; /* Evita el desbordamiento */
+    overflow: hidden;
+    /* Evita el desbordamiento */
 }
 
 .modal-content {
@@ -324,42 +351,43 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-  
-  .sociworal-icon,
-  .menu {
+}
+
+.sociworal-icon,
+.menu {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px 0;
     flex-wrap: wrap;
-  }
-  
-  .social-icon__item,
- 
-  
-  .social-icon__link {
+}
+
+.social-icon__item,
+
+
+.social-icon__link {
     font-size: 2rem;
     color: #fff;
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
-  }
-  .social-icon__link:hover {
+}
+
+.social-icon__link:hover {
     transform: translateY(-10px);
-  }
-  
- 
-  
-  .footer p {
+}
+
+
+
+.footer p {
     color: #fff;
     margin: 15px 0 10px 0;
     font-size: 1rem;
     font-weight: 300;
-  }
-  
-  .wave {
+}
+
+.wave {
     position: absolute;
     top: -100px;
     left: 0;
@@ -367,53 +395,55 @@ body {
     height: 100px;
     background: url("https://i.ibb.co/wQZVxxk/wave.png");
     background-size: 1000px 100px;
-  }
-  
-  .wave#wave1 {
+}
+
+.wave#wave1 {
     z-index: 1000;
     opacity: 1;
     bottom: 0;
     animation: animateWaves 4s linear infinite;
-  }
-  
-  .wave#wave2 {
+}
+
+.wave#wave2 {
     z-index: 999;
     opacity: 0.5;
     bottom: 10px;
     animation: animate 4s linear infinite !important;
-  }
-  
-  .wave#wave3 {
+}
+
+.wave#wave3 {
     z-index: 1000;
     opacity: 0.2;
     bottom: 15px;
     animation: animateWaves 3s linear infinite;
-  }
-  
-  .wave#wave4 {
+}
+
+.wave#wave4 {
     z-index: 999;
     opacity: 0.7;
     bottom: 20px;
     animation: animate 3s linear infinite;
-  }
-  
-  @keyframes animateWaves {
+}
+
+@keyframes animateWaves {
     0% {
-      background-position-x: 1000px;
+        background-position-x: 1000px;
     }
+
     100% {
-      background-positon-x: 0px;
+        background-positon-x: 0px;
     }
-  }
-  
-  @keyframes animate {
+}
+
+@keyframes animate {
     0% {
-      background-position-x: -1000px;
+        background-position-x: -1000px;
     }
+
     100% {
-      background-positon-x: 0px;
+        background-positon-x: 0px;
     }
-  }
+}
 
 /* Responsive Design */
 
